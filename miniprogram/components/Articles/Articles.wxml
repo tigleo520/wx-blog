@@ -1,0 +1,21 @@
+<!--components/Articles/Articles.wxml-->
+<view class="articles-list">
+  <navigator class="article-wrap"
+  wx:for="{{articleList}}"
+  wx:key="_id"
+  url="../../pages/article/article?id={{item._id}}"
+  bindtap="handleArticleTap"
+  data-id="{{item._id}}"
+  >
+    <view class="title">·{{item.title}}</view>
+    <rich-text class="content" nodes="{{item.content}}"></rich-text>
+    <view class="tips">
+      <text class="iconfont icon-time"></text>
+      {{item.posttime}}
+      <text class="iconfont icon-view"></text>
+      {{item.view}}
+      <text class="iconfont icon-comment"></text>
+      {{item.comments.length?item.comments.length:''}}
+    </view>
+  </navigator>
+</view>

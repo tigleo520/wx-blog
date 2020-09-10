@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 轮播图 -->
+  <swiper class="swiper" autoplay  circular indicator-dots="true">
+    <swiper-item
+    wx:for="{{swiperList}}"
+    wx:key="_id"
+    >
+      <navigator url="">
+        <image mode="widthFix" src="{{item.src}}" />
+      </navigator>
+    </swiper-item>
+  </swiper>
+  <!-- 文章列表 -->
+  <Articles class="article-list" articleList="{{articleList}}"></Articles>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Articles": "../../components/Articles/Articles"
+  },
+  "navigationBarTitleText": "Tigleo"
+}

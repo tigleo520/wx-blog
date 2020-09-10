@@ -1,0 +1,48 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+  <!-- 个人信息 -->
+  <view class="user-wrap">
+    <view class="user-info">
+      <block wx:if="{{!userInfo.avatarUrl}}">
+        <view class="iconfont icon-touxiang"></view>
+        <button class="btn" size="mini" open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo" plain="{{true}}">点击登录</button>
+      </block>
+      <block wx:else>
+        <image mode="widthFix" src="{{userInfo.avatarUrl}}" />
+        <view class="username" >{{userInfo.nickName}}</view>
+      </block>
+      <!-- <text class="iconfont icon-ico">
+        <text class="iconfont icon-jiantou"></text>
+      </text> -->
+    </view>
+  </view>
+  <!-- 收藏 -->
+  <view wx:if="{{userInfo.avatarUrl}}" class="collection-wrap">
+    <navigator class="collection" url="/pages/collection/collection" hover-class="none">
+      <text >我的收藏</text>
+      <text class="iconfont icon-jiantou"></text>
+    </navigator>
+    <view class="collection"></view>
+  </view>
+  <!-- 导航 -->
+  <view class="select-wrap">
+    <view class="ops">
+      <view><text class="iconfont icon-zan"></text>赞赏支持</view>
+      <text class="iconfont icon-jiantou"></text>
+    </view>
+    <view class="ops">
+      <view><text class="iconfont icon-share"></text>分享好友</view>
+      <text class="iconfont icon-jiantou"></text>
+      <button open-type="share"></button>
+    </view>
+    <view class="ops">
+      <view><text class="iconfont icon-feedback"></text>意见反馈</view>
+      <text class="iconfont icon-jiantou"></text>
+      <button open-type="feedback"></button>
+    </view>
+    <navigator class="ops" url="/pages/contact/contact">
+      <view><text class="iconfont icon-contact"></text>联系作者</view>
+      <text class="iconfont icon-jiantou"></text>
+    </navigator>
+  </view>
+</view>

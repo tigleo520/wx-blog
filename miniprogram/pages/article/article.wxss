@@ -1,0 +1,176 @@
+/* pages/article/article.wxss */
+.article-wrap {
+  margin: 30rpx 30rpx 100rpx;
+  position: relative;
+}
+.article-wrap .title {
+  font-size: 40rpx;
+  font-weight: 600;
+}
+.article-wrap .tips {
+  padding-bottom: 20rpx;
+  border-bottom: 3px solid #ccc;
+  font-size: 24rpx;
+  color: #666;
+  /* text-align: right; */
+}
+.article-wrap .tips .iconfont {
+  position: relative;
+  top: 2rpx;
+  margin-left: 15rpx;
+  font-size: 28rpx;
+}
+.article-wrap .tips .icon-view {
+  font-size: 44rpx;
+  top: 8rpx;
+}
+.article-wrap .content {
+  margin-top: 20rpx;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 5rpx;
+  border: 1rpx solid #f1f1f1;
+  border-radius: 10rpx;
+  box-shadow: 5rpx 5rpx 5rpx #eee;
+}
+.article-wrap .comments {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+}
+.article-wrap .comments .comments-count {
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.article-wrap .comments .comments-count text{
+  border-left: 8rpx solid red;
+  padding-left: 20rpx;
+  color: #666;
+}
+.article-wrap .comments .comment-wrap {
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1rpx solid #f1f1f1;
+  border-radius: 10rpx;
+  box-shadow: 5rpx 5rpx 5rpx #eee;
+}
+.article-wrap .comments .user-info {
+  display: flex;
+}
+.article-wrap .comments .user-info image {
+  margin-right: 30rpx;
+  width: 80rpx;
+  border-radius: 50%;
+}
+.article-wrap .comments .user-info .posttime {
+  margin-top: 10rpx;
+  font-size: small;
+  color: #666;
+}
+.article-wrap .comments .comment-content {
+  margin: 20rpx;
+}
+.comment {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 80rpx;
+  bottom: 0;
+  padding: 10rpx;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+}
+.comment .comment-input {
+  display: flex;
+  justify-content: space-around;
+}
+.comment .comment-input .icon-huifu {
+  font-size: 50rpx;
+  color: #999;
+}
+.comment .comment-input image {
+  margin: 0 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+.comment .comment-input .input{
+  margin-top: 10rpx;
+  width: 60vw;
+  font-size: 28rpx;
+  border-bottom: 1px solid #ccc;
+}
+.comment .btn {
+  margin-right: 0;
+  margin-left: 0;
+  font-size: 28rpx;
+}
+.get-userinfo {
+  position: fixed;
+  top: 20vh;
+  width: 80vw;
+  left: 10vw;
+  padding: 30rpx 0;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 30rpx;
+  z-index: 999;
+}
+.get-userinfo .title {
+  padding: 30rpx 0;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 100rpx;
+}
+
+.get-userinfo .btn-wrap {
+  padding-top: 26rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80rpx;
+  overflow: hidden;
+}
+.get-userinfo .btn-wrap .btn {
+  background-color: transparent;
+  font-size: 600;
+  color: #333;
+}
+.get-userinfo .btn-wrap .confirm {
+  background-color: transparent;
+  font-size: 600;
+  color: #3cc51f;
+}
+.toolbar {
+  position: fixed;
+  width: 100vw;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  bottom: 0;
+}
+.toolbar .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.toolbar .item .icon-zan1 {
+  color: red;
+}
+.toolbar .item .icon-collection1 {
+  color: darkorange;
+}
+.toolbar .item view {
+  font-size: 28rpx;
+}
+.toolbar .item .btn {
+  position: absolute;
+  width: 20vw;
+  height: 100%;
+  opacity: 0;
+}

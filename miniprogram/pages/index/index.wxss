@@ -1,0 +1,7 @@
+/**index.wxss**/
+.swiper {
+  height: 319rpx;
+}
+.article-list {
+  position: relative;
+}

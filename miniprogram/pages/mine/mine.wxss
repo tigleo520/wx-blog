@@ -1,0 +1,84 @@
+/* pages/mine/mine.wxss */
+.user-wrap .user-info {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50rpx;
+  background-color: rgba(255, 255, 255, 0.5);
+  
+}
+.user-wrap .user-info .icon-touxiang {
+  font-size: 200rpx;
+  width: 200rpx;
+  height: 200rpx;
+  color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.user-wrap .user-info image {
+  width: 200rpx;
+  height: 200rpx;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+.user-wrap .user-info .btn {
+  font-size: 42rpx;
+  font-weight: 400;
+  color: #1385e2;
+  border: none;
+}
+.user-wrap .user-info .username {
+  margin-left: 150rpx;
+  font-size: 48rpx;
+  color: #007ec6;
+}
+.user-wrap .user-info navigator {
+  position: absolute;
+  right: 50rpx;
+  bottom: 50rpx;
+  opacity: 0;
+}
+.collection-wrap {
+  position: relative;
+  margin-top: 20rpx;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 30rpx 50rpx;
+}
+.collection-wrap navigator {
+  display: flex;
+  padding-left: 20rpx;
+  justify-content: space-between;
+  border-left: #ff8c00 6rpx solid;
+}
+.select-wrap {
+  position: relative;
+  margin-top: 30rpx;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.select-wrap .ops {
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+.select-wrap .ops .iconfont {
+  display: inline-block;
+  margin-right: 16rpx;
+  font-size: 40rpx;
+  color: rgb(19, 133, 226);
+}
+.select-wrap .ops .icon-zan {
+  color: rgb(241, 91, 65);
+}
+.icon-jiantou {
+  font-size: 40rpx;
+  color: rgb(19, 133, 226);
+}
+.select-wrap .ops button {
+  position: absolute;
+  width: 100%;
+  height: 80rpx;
+  opacity: 0;
+}

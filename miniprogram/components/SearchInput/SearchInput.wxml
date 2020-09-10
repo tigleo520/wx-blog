@@ -1,0 +1,5 @@
+<!-- components/SeachInput/SeachInput.wxml -->
+<view class="search-wrap">
+  <input class="search-input" confirm-type="search" bindconfirm="confirmTap" bindblur="handleBlur" placeholder="请输入搜索关键词" placeholder-style="color:#ccc" />
+  <icon type="search" bindtap="handleSearch" />
+</view>

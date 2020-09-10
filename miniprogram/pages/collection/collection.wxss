@@ -1,0 +1,40 @@
+/* pages/collection/collection.wxss */
+.collection-wrap {
+  position: relative;
+}
+.collection-wrap .collection {
+  padding: 20rpx;
+  font-size: 40rpx;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 20rpx;
+  border-left: 6px solid #ff8c00;
+}
+.collec-list {
+  margin: 20rpx;
+  padding: 20rpx;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 15rpx;
+  border: 1px solid #f1f1f1;
+  box-shadow: 5rpx 5rpx 5rpx #eee;
+}
+.collec-list .title {
+  font-size: 38rpx;
+}
+.collec-list .content {
+  margin: 20rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  color: #666;
+}
+.no {
+  position: relative;
+  margin: 200rpx auto;
+  width: 200rpx;
+  color: #999;
+  text-align: center;
+}
+.no .iconfont {
+  font-size: 200rpx;
+}

@@ -1,0 +1,36 @@
+/**app.wxss**/
+@import "./styles/iconfont.wxss";
+
+page,
+view,
+text,
+swiper,
+swiper-item,
+navigator,
+image {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100%;
+  position: relative;
+}
+
+.container::before{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  background-image: url(https://s1.ax1x.com/2020/06/05/trvJKA.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  opacity: 0.1;
+}
+
+image {
+  width: 100%;
+}

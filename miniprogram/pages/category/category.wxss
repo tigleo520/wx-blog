@@ -1,0 +1,49 @@
+/* pages/category/category.wxss */
+.category-list {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.category-list .category {
+  display: inline-block;
+  padding: 20rpx;
+  text-align: center;
+  border-bottom: 2px solid #ccc;
+}
+
+.category-list .active {
+  border-bottom: 2px solid #22b7fe;
+  color: #22b7fe;
+}
+
+.article-list {
+  position: relative;
+}
+
+.no {
+  position: relative;
+  margin: 200rpx auto;
+  width: 200rpx;
+  color: #999;
+  text-align: center;
+}
+
+.no .iconfont {
+  font-size: 200rpx;
+}
+
+.gotop {
+  position: fixed;
+  right: 30rpx;
+  bottom: 50rpx;
+  height: 80rpx;
+  width: 80rpx;
+  padding-top: 10rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #ccc;
+  opacity: 0.5;
+}
+.gotop .iconfont {
+  font-size: 60rpx;
+}

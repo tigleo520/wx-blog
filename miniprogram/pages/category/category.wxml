@@ -1,0 +1,26 @@
+<!--pages/category/category.wxml-->
+<view class="container">
+  <!-- 搜索框 -->
+  <SearchInput bind:search="handleSearch"></SearchInput>
+  <!-- 文章分类 -->
+  <scroll-view scroll-x="{{true}}" class="category-list">
+    <view class="category {{(id === item._id)||((id === '')&&(item._id === categoryList[0]._id)) ? 'active' : ''}}"
+    wx:for="{{categoryList}}"
+    wx:key="_id"
+    data-id="{{item._id}}"
+    bindtap="handleSelect"
+    >
+    {{item.name}}
+    </view>
+  </scroll-view>
+  <!-- 文章列表 -->
+  <Articles class="article-list" articleList="{{articleList}}"></Articles>
+  <view wx:if="{{articleList.length===0}}" class="no">
+    <text class="iconfont icon-zanwushuju"></text>
+    <view>暂无数据</view>
+  </view>
+  <!-- 回到顶部 -->
+  <view class="gotop" hidden="{{!gotop}}" catchtap="goTop">
+    <text class="iconfont icon-huidingbu"></text>
+  </view>
+</view>

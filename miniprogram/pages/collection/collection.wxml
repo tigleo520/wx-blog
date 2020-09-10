@@ -1,0 +1,17 @@
+<!--pages/collection/collection.wxml-->
+<view class="container">
+  <view class="collection-wrap">
+    <view class="collection">我的收藏</view>
+    <navigator class="collec-list" url="/pages/article/article?id={{item._id}}"
+    wx:for="{{articlesList}}"
+    wx:key="_id"
+    >
+      <view class="title">{{item.title}}</view>
+      <rich-text class="content" nodes="{{item.content}}"></rich-text>
+    </navigator>
+    <view wx:if="{{articlesList.length===0}}" class="no">
+      <text class="iconfont icon-zanwushuju"></text>
+      <view>暂无收藏</view>
+    </view>
+  </view>
+</view>

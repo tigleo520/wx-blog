@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/category/category",
+    "pages/article/article",
+    "pages/contact/contact",
+    "pages/collection/collection",
+    "pages/mine/mine"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Tigleo",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#797979",
+    "selectedColor": "#22b7fe",
+    "backgroundColor": "#f9f9f9",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./imgs/home.png",
+        "selectedIconPath": "./imgs/_home.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "./imgs/category.png",
+        "selectedIconPath": "./imgs/_category.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "./imgs/mine.png",
+        "selectedIconPath": "./imgs/_mine.png"
+      }
+    ]
+  },
+  
+    
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

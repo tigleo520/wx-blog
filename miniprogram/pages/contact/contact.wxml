@@ -1,0 +1,15 @@
+<!--pages/contact/contact.wxml-->
+<view class="container">
+  <view class="contact-wrap">
+    <view class="userinfo">
+      <view class="name">Tigleo</view>
+      <view class="decs">互联网/Web前端开发</view>
+    </view>
+    <view class="contact">
+      <view class="ops"><text class="iconfont icon-qq"></text>250900917</view>
+      <view class="ops"><text class="iconfont icon-email"></text>tigleo518@163.com</view>
+      <view class="ops"><text class="iconfont icon-address"></text>北京市昌平区</view>
+    </view>
+    <view class="iconfont icon-ico" bindtap="handleContact"></view>
+  </view>
+</view>

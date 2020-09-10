@@ -1,0 +1,76 @@
+<!--pages/article/article.wxml-->
+<view class="container">
+  <view class="article-wrap">
+    <view class="title">{{article.title}}</view>
+    <view class="tips">
+      <text class="iconfont icon-time"></text>
+      {{article.posttime}}
+      <text class="iconfont icon-view"></text>
+      {{article.view}}
+      <text class="iconfont icon-comment"></text>
+      {{article.comments.length}}
+      <text class="iconfont icon-zan"></text>
+      {{article.zan}}
+    </view>
+    <view class="content">
+      <!-- <rich-text nodes="{{article.content}}"></rich-text> -->
+      <towxml nodes="{{article.content}}"/>
+    </view>
+    <!-- 评论内容 -->
+    <view class="comments">
+      <view class="comments-count">
+        <text>{{article.comments.length}}条评论</text>
+      </view>
+      <view class="comment-wrap"
+      wx:for="{{article.comments}}"
+      wx:key="index"
+      >
+        <view class="user-info">
+          <image mode="widthFix" src="{{item.avatarUrl}}" />
+          <view >
+            <view class="nickname">{{item.nickName}}</view>
+            <view class="posttime">{{item.posttime}}</view>
+          </view>
+        </view>
+        <view class="comment-content">{{item.content}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 底部工具栏 -->
+  <view wx:if="{{!comment}}" class="toolbar">
+    <view class="item" bindtap="handleZan">
+      <text class="iconfont {{zan?'icon-zan1':'icon-zan'}}"></text>
+      <view>点赞</view>
+    </view>
+    <view class="item" bindtap="handleCollection">
+      <text class="iconfont {{collection?'icon-collection1':'icon-collection'}}"></text>
+      <view>收藏</view>
+    </view>
+    <view class="item">
+      <text class="iconfont icon-share"></text>
+      <view>分享</view>
+      <button class=".btn" open-type="share"></button>
+    </view>
+    <view class="item" bindtap="handleComment">
+      <text class="iconfont icon-comment"></text>
+      <view>评论</view>
+    </view>
+  </view>
+  <!-- 评论 -->
+  <view wx:elif="{{comment}}" class="comment">
+    <view class="comment-input">
+      <text class="iconfont icon-huifu" bindtap="handleCommentBack"></text>
+      <image mode="widthFix" src="{{userInfo.avatarUrl}}" />
+      <input class="input" placeholder="随便说点什么吧~" bindblur="handleBlur" />
+    </view>
+    <button type="primary" size="mini" plain disabled="{{disabled?true:false}}" class="btn" bindtap="handleInput">发送</button>
+  </view>
+  <!-- 登录授权提示框 -->
+  <view wx:if="{{author}}" class="get-userinfo">
+    <view class="title">登录之后才能继续</view>
+    <view class="btn-wrap">
+      <button class="btn" bindtap="handlecancle">取消</button>
+      <button class="confirm" open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">登录</button>
+    </view>
+  </view>
+</view>
